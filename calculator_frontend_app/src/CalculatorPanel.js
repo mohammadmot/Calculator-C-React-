@@ -33,7 +33,7 @@ function CalculatorPanel(props) {
     */
     
     const calc_buttons = buttons.map((value, index) => {
-        return <CalculatorButton
+        return <CalculatorButton key={index}
             caption={value.text}
             onClick={value.handler} />
     });

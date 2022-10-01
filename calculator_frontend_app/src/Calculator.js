@@ -56,8 +56,8 @@ class Calculator extends React.Component
 
     updateNumber(newNumber)
     {
-        var newNumbers = this.state.numbers;
-        newNumbers[this.state.numberIdx] = newNumbers;
+        var newNumbers = [...this.state.numbers]; // clone call by value
+        newNumbers[this.state.numberIdx] = newNumber;
         this.setState({
             result: newNumbers[this.state.numberIdx],
             numbers: newNumbers,
@@ -89,7 +89,7 @@ class Calculator extends React.Component
             return;
         }
 
-        this.props.CalculatorApi.Calculate(
+        this.props.CalculatorApi.calculate(
             this.state.numbers[0],
             this.state.numbers[1],
             this.state.operation,
