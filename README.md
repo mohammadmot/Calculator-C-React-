@@ -27,11 +27,13 @@ ref: https://github.com/Corvusoft/restbed.git
 
 linux:
 > sudo apt update
+
 > sudo apt install librestbed-dev
 
 [2]:
 JSON libraries in C++:
 > https://github.com/nlohmann/json.git
+
 > https://github.com/nlohmann/json/releases/download/v3.11.2/json.hpp
 
 [3]:
@@ -44,7 +46,9 @@ or
 
 
 > mkdir build
+
 > cmake ./ -Bbuild
+
 > cmake --build ./build --target all --config Release
 
 ### [Configuration]
